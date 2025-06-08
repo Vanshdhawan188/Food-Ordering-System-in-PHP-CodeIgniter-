@@ -11,7 +11,7 @@ Attackers can inject malicious JavaScript via the `patname` field (POST paramete
 | **Vulnerable Section** | `Stores And Restaurants`                                                   |
 | **Attack Vector**   | `Store Name And Adderess` parameter via POST request                                 |
 | **Vulnerability**   | Stored Cross-Site Scripting (XSS)                                     |
-| **Version Affected Released Date**| May 18, 2021                                                                |
+| **Version Affected**| 1.0                                                              |
 | **Official Website**| https://codeastro.com/food-ordering-system-in-php-codeigniter-with-source-code/ |
 
 ## Proof of Concept (PoC)
