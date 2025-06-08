@@ -73,3 +73,6 @@ Encode output before rendering dynamic content:
 echo htmlentities($user_input, ENT_QUOTES, 'UTF-8');
 
 
+  Author: Subhash Paudel And Vansh Dhawan
+  Date: 2025-06-08
+  Severity: High
