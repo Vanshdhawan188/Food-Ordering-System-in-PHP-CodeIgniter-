@@ -40,3 +40,28 @@ Reload the stored page. You’ll see a JavaScript alert(1) triggered — confirm
 
 ![image](https://github.com/user-attachments/assets/6b718c1d-e8b8-4d57-b009-3fc33fd18ef8)
 
+## 🛑 Potential Impact
+
+- **Session Hijacking**: Steal user/admin session cookies via `document.cookie`.
+- **Phishing**: Inject fake forms to harvest credentials.
+- **Defacement**: Alter webpage content, defame the brand.
+- **Data Exfiltration**: Steal sensitive data through background requests.
+- **Malware Propagation**: Redirect users to malicious domains.
+- **Privilege Escalation**: Gain access to higher-privilege accounts by exploiting stored scripts.
+
+---
+
+## ✅ Mitigation Strategies
+
+### 🔒 Input Sanitization
+
+Sanitize all user inputs on the server side using functions like `htmlspecialchars()` in PHP.
+
+### 🧹 Output Encoding
+
+Encode output before rendering dynamic content:
+
+```php
+echo htmlentities($user_input, ENT_QUOTES, 'UTF-8');
+
+
