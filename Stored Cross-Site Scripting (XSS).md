@@ -11,7 +11,7 @@ Attackers can inject malicious JavaScript via the `patname` field (POST paramete
 | **Vulnerable Section** | `Stores And Restaurants`                                                   |
 | **Attack Vector**   | `Store Name And Adderess` parameter via POST request                                 |
 | **Vulnerability**   | Stored Cross-Site Scripting (XSS)                                     |
-| **Version Affected Date**| May 18, 2021                                                                |
+| **Version Affected Released Date**| May 18, 2021                                                                |
 | **Official Website**| https://codeastro.com/food-ordering-system-in-php-codeigniter-with-source-code/ |
 
 ## Proof of Concept (PoC)
@@ -29,7 +29,7 @@ Go to Store (select any Store) → edit.
 ![image](https://github.com/user-attachments/assets/b8cc0652-5bd0-4ffa-aa1b-2bb1748f4b16)
 
 Paste the following payload in the "Address" and "Name" input field and click Update:
-<script>alert(1)</script>
+## <script>alert(1)</script>
 ![image](https://github.com/user-attachments/assets/898c693e-fdc2-4e37-a4e2-dad0349e28f3)
 
 
@@ -42,7 +42,9 @@ Reload the stored page. You’ll see a JavaScript alert(1) triggered — confirm
 
 ![image](https://github.com/user-attachments/assets/0df022bd-1dab-43c1-823d-201e2ebbc0e3)
 
-This also affects the user side as if anyone tries to open restro's xss will be deliverd:
+This also affects the user side as if anyone tries to open Restaurants xss will be reflected:
+http://localhost/foodienator/restaurant/index
+
 ![image](https://github.com/user-attachments/assets/b294e4ad-dfa3-48ac-a192-f08f5033a928)
 
 
