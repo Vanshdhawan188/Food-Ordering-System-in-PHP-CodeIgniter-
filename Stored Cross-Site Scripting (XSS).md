@@ -1,18 +1,18 @@
 ## Vulnerability Summary
 
-A critical **Stored Cross-Site Scripting (XSS)** vulnerability was discovered in the `edit-patient.php` file of **PHPGurukul's Hospital Management System (v4.0)**.  
+A critical **Stored Cross-Site Scripting (XSS)** vulnerability was discovered in the stores section of **Food Ordering System in PHP CodeIgniter**.  
 Attackers can inject malicious JavaScript via the `patname` field (POST parameter), which gets persistently stored in the database and executed whenever the profile page is viewed.
 
 ### Key Details
 
 | Property            | Value                                                                 |
 |---------------------|-----------------------------------------------------------------------|
-| **Affected Vendor** | PHPGurukul                                                            |
-| **Vulnerable File** | `edit-patient.php`                                                   |
-| **Attack Vector**   | `patname` parameter via POST request                                 |
+| **Affected Vendor** | CodeIgniter                                                             |
+| **Vulnerable Section** | `Stores And Restaurants`                                                   |
+| **Attack Vector**   | `Store Name And Adderess` parameter via POST request                                 |
 | **Vulnerability**   | Stored Cross-Site Scripting (XSS)                                     |
-| **Version Affected**| v4.0                                                                 |
-| **Official Website**| [Hospital Management System](https://phpgurukul.com/hospital-management-system-in-php/) |
+| **Version Affected Date**| May 18, 2021                                                                |
+| **Official Website**| https://codeastro.com/food-ordering-system-in-php-codeigniter-with-source-code/ |
 
 ## Proof of Concept (PoC)
 ### Step-by-Step Exploitation
@@ -39,6 +39,12 @@ Reload the stored page. You’ll see a JavaScript alert(1) triggered — confirm
 ![image](https://github.com/user-attachments/assets/bf9a82d5-9fe1-4204-8e16-5a9f3e71e314)
 
 ![image](https://github.com/user-attachments/assets/6b718c1d-e8b8-4d57-b009-3fc33fd18ef8)
+
+![image](https://github.com/user-attachments/assets/0df022bd-1dab-43c1-823d-201e2ebbc0e3)
+
+This also affects the user side as if anyone tries to open restro's xss will be deliverd:
+![image](https://github.com/user-attachments/assets/b294e4ad-dfa3-48ac-a192-f08f5033a928)
+
 
 ## 🛑 Potential Impact
 
